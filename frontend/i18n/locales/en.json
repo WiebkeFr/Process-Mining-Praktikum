@@ -1,0 +1,30 @@
+{
+  "title": "Process Mining",
+  "intro": "This is a tool to process and visualize event logs using the Alpha Miner Algorithm or the Heuristic Miner.",
+  "alpha": {
+    "explanation": "The Alpha Algorithm was one of the first algorithms developed for process discovery. The aim of the algorithm is to produce a petri-net that can replay the event log. The algorithm searches for particular patterns to determine <strong>relations</strong> between pairs of events (footprint-matrix). These relations are converted to a petri-net consisting of <strong>sequences</strong> and <strong>logical gates (and/xor)</strong>.\nBut the Alpha Algorithm also has limitations:\n- Complex logs can generate unnecessary places\n- short loops are not recognized\n- high noise sensitivity, as the frequency of events is not considered"
+  },
+  "heuristic": {
+    "explanation": "The Heuristic Miner is another process dicovery algorithm. The algorithm takes <strong>frequency</strong> and <strong>sequence</strong> of relations between event into account and is therefore not that sensitive to noise. The <strong>minimum occurences of edges</strong> and a <strong>dependency threshold</strong> are required as parameters to filter infrequent edges. The result can be displayed as a dependency-net which does show frequency and dependency, but does not display typical event-patterns like AND or XOR.",
+    "parameter": {
+      "min_edge": "Minimum number of edge-occurences",
+      "dep_threshold": "Dependency threshold"
+    }
+  },
+  "instruction": {
+    "title": "How does it work?",
+    "explanation": "You can choose your XES-file here and the selected algorithm is executed automatically. The runtime is dependent on the size of the file. The petri or dependency-net is visualized below and can also be downloaded as a PNG-file.\nIn order to explain the visualization more in-depth, further information e.g. the corresponding footprint-matrix for the Alpha Miner or frequency and dependency-matrix for the Heuristic Miner are displayed below."
+  },
+  "action": {
+    "upload": "Add file here",
+    "download": "Download PNG"
+  },
+  "accordion": {
+    "title": "Additional information about visualization:",
+    "footprint": "Footprint Matrix",
+    "parameter": "Current parameters",
+    "frequency": "Frequency Matrix",
+    "dependency": "Dependency Matrix"
+  },
+  "reference": "Further information about the topics:"
+}

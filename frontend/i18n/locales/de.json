@@ -1,0 +1,30 @@
+{
+  "title": "Process Mining",
+  "intro": "Dies ist ein Werkzeug zur Verarbeitung und Visualisierung von Ereignisprotokollen mithilfe des Alpha Miners sowie des Heuristic Miner.",
+  "alpha": {
+    "explanation": "Der Alpha Algorithmus war einer der ersten Algorithmen für Prozess-Aufdeckung. Das Ziel des Algorithmus ist die Erstellung eines Petrinetzes, das die Eventprotokolle reproduzieren kann. Der Algorithmus sucht nach bestimmten Mustern, um die <strong>Beziehung</strong> zwischen Event-Paaren zu ermitteln. Dadurch wird das Petrinetz mit <strong>Sequenzen</strong> and <strong>logischen Übergängen (and/xor) </strong>entwickelt.\nJedoch hat der Alpha Algorithmus auch Einschränkungen:\n- bei komplexen Protokollen können unnötige Transition hinzugefügt werden\n- kleine Schleifen werden nicht erkannt\n - hohe Rauschempfindlichkeit, da der Algorithmus die Anzahl der Vorkommen der einzelnen Event nicht beachtet"
+  },
+  "heuristic": {
+    "explanation": "Der Heuristic Miner ist ein weitere Algorithmus zur Prozess-Aufdeckung. Dieser beachtet die <strong>Vorkommen</strong> und <strong>Abhängigkeiten</strong> der Beziehungen zwischen unterschiedlichen Events, und ist demnach nicht so rauschempfindlich. Durch die Parameter für die <strong>minimale Kantenanzahl</strong> und die <strong>minimale Abhängigkeiten</strong> werden selten vorkommende Kanten herausgefiltert. Das Resultat wird als Anhängigkeitsgraph dargestellt und zeigt sowohl Vorkommen als auch Anhängigkeiten an. AND und XOR-Beziehungen werden jedoch vernachlässigt.",
+    "parameter": {
+      "min_edge": "Minimale Kantenanzahl",
+      "dep_threshold": "Minimale Abhängigkeit"
+    }
+  },
+  "instruction": {
+    "title": "Wie funktioniert es?",
+    "explanation": "Du kannst das zu bearbeitende XES-Dokument hier wählen und der ausgewählte Algorithmus wird automatisch gestartet. Das Petri- oder Abhängigskeitsnetz wird unten dargestellt und kann als PNG heruntergeladen werden.\nUnter der Darstellung befinden sich zudem weitere Informationen wie zum Beispiel die Footprint-Matrix."
+  },
+  "action": {
+    "upload": "Uploade Dokument hier",
+    "download": "Download PNG"
+  },
+  "accordion": {
+    "title": "Zusätzliche Informationen zur Visualisierung:",
+    "footprint": "Footprint Matrix",
+    "parameter": "Benutze Parameter",
+    "frequency": "Frequenzmatrix",
+    "dependency": "Abhängigkeitsmatrix"
+  },
+  "reference": "Hier findest du weitere Information:"
+}
